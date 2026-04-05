@@ -7,9 +7,10 @@ resource "aws_instance" "cicd_ec2" {
     instance_type = "t3.small"
     key_name = "devopskey"
     associate_public_ip_address = true
-    vpc_security_group_ids = ["aws_security_group.cicd_sg.id"]
+    vpc_security_group_ids = [aws_security_group.cicd_sg.id]
 
     user_data = <<-EOF
+                #!/bin/bash
                 apt update
                 apt install -y nginx
                 systemctl start nginx
