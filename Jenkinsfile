@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout code') {
             steps {
-                git branch: 'main', url: ''
+                git branch: 'main', url: 'https://github.com/jewleprince-course/ci-cd-task.git'
             }
         }
 
