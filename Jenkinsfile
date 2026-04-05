@@ -39,8 +39,7 @@ pipeline {
                         ).trim()
                     }
                 }
-                echo "Server IP is  ${SERVER_IP
-                }"
+                echo "Server IP is  ${SERVER_IP}"
             }
         }
 
