@@ -34,7 +34,7 @@ pipeline {
                 dir('terraform') {
                     script {
                         env.SERVER_IP = sh (
-                            script: "terraform output -raw public_ip"
+                            script: "terraform output -raw public_ip",
                             returnStdout: true
                         ).trim()
                     }
