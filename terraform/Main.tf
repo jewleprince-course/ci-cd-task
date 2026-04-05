@@ -1,5 +1,5 @@
 provider "aws" {
-    region = ap-south-2
+    region = "ap-south-2"
 }
 
 resource "aws_instance" "cicd_ec2" {
