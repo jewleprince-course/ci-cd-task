@@ -57,10 +57,10 @@ pipeline {
                 """
 
                 sh """
-                ssh -i ${KEY_PATH} -o StrictHostKeyChecking=no ubuntu@${SERVER_IP}
+                ssh -i ${KEY_PATH} -o StrictHostKeyChecking=no ubuntu@${SERVER_IP} "
                 sudo rm -rf /var/www/html/* && 
                 sudo mv /tmp/* /var/www/html/ && 
-                sudo systemctl restart nginx
+                sudo systemctl restart nginx"
                 """
             }
         }
